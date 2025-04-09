@@ -10,6 +10,11 @@ import SimpleList from "./components/SimpleList"
 import ComplexList from "./components/ComplexList"
 import Mystore from "./components/Mystore"
 import LastViewProduct from "./components/LastViewProduct"
+import PropsChildren from "./components/PropsChildren"
+import EventHandling from "./components/EventHandling"
+import ConditionalRendring from "./components/ConditionalRendring"
+import SimpleState from "./components/SimpleState"
+import User from "./components/User"
 
 function App() {
   return (
@@ -20,7 +25,12 @@ function App() {
     {/* <SimpleList /> */}
     {/* <ComplexList /> */}
     {/* <Mystore /> */}
-    <LastViewProduct/>
+    {/* <LastViewProduct/> */}
+    {/* <PropsChildren /> */}
+    {/* <EventHandling /> */}
+    {/* <ConditionalRendring /> */}
+    {/* <SimpleState /> */}
+    <User />
   </>
   );
 }

@@ -33,9 +33,11 @@ const LastViewProduct = () => {
       </div>
 
       <section className="flex gap-2 items-center mt-2.5">
-        {myProduct.map((good) => {
+        {
+        myProduct.map((good) => {
           return <MystoreSingleProduct key={good.id} {...good} />;
-        })}
+        })
+        }
       </section>
     </div>
   );
