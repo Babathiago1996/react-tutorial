@@ -15,6 +15,13 @@ import EventHandling from "./components/EventHandling"
 import ConditionalRendring from "./components/ConditionalRendring"
 import SimpleState from "./components/SimpleState"
 import User from "./components/User"
+import ComplexState from "./components/ComplexState"
+import Arrays from "./components/ComplexStateArrays"
+import ExampleArray from "./components/ExampleArray"
+import ComplexStateArrays from "./components/ComplexStateArrays"
+import SimpleEffect from "./components/SimpleEffect"
+import FetchData from "./components/FetchData"
+import Fetchuser from "./components/Fetchuser"
 
 function App() {
   return (
@@ -30,7 +37,13 @@ function App() {
     {/* <EventHandling /> */}
     {/* <ConditionalRendring /> */}
     {/* <SimpleState /> */}
-    <User />
+    {/* <User /> */}
+    {/* <ComplexState /> */}
+    {/* <ComplexStateArrays /> */}
+    {/* <ExampleArray /> */}
+    {/* <SimpleEffect /> */}
+    {/* <FetchData /> */}
+    <Fetchuser />
   </>
   );
 }

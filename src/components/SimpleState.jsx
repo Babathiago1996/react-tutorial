@@ -2,32 +2,32 @@ import React from 'react'
 import {useState} from "react"
 
 const SimpleState = () => {
-    const [name, setName]=useState("Declan")
-    const handleNameChange=()=>{
-        if(name==="Declan"){
-            setName("saka")
-        }else{
-            setName("Declan")
-        }
-    }
-    const [num, setNum]=useState(0)
-    // increase,
-    const handleIncrease=()=>{
-        setNum(num+1)
-    }
-    // decrease
-    const handleDecrease=()=>{
-        setNum(num-1)
-    }
-    const details = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi reiciendis nam necessitatibus maiores 
-    commodi. Sint architecto nobis consequatur id animi `;
-    const [show, setShow]=useState(false)
-    const handleShowDetails=()=>{
-        setShow(!show)
-    }
-  return (
-    <div className="py-10 text-center">
-      <h1 className="text-3xl font-bold">useSate 1</h1>
+//     const [name, setName]=useState("Declan")
+//     const handleNameChange=()=>{
+//         if(name==="Declan"){
+//             setName("saka")
+//         }else{
+//             setName("Declan")
+//         }
+//     }
+//     const [num, setNum]=useState(0)
+//     // increase,
+//     const handleIncrease=()=>{
+//         setNum(num+1)
+//     }
+//     // decrease
+//     const handleDecrease=()=>{
+//         setNum(num-1)
+//     }
+//     const details = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi reiciendis nam necessitatibus maiores 
+//     commodi. Sint architecto nobis consequatur id animi `;
+//     const [show, setShow]=useState(false)
+//     const handleShowDetails=()=>{
+//         setShow(!show)
+//     }
+//   return (
+//     <div className="py-10 text-center">
+      {/* <h1 className="text-3xl font-bold">useSate 1</h1>
       <p>my name is {name}</p>
       <button onClick={handleNameChange} className="btn">
         change name
@@ -47,9 +47,19 @@ const SimpleState = () => {
 <h2 className='text-2xl text-red-500'>Madrid demoslidh at the emirate stadium</h2>
 <p className='mb-2'>{show? details: `${details.substring(0,100)}...`}</p>
 <button onClick={handleShowDetails} className='btn !bg-purple-500'>{show? "show less":"show more"}</button>
-      </div>
-    </div>
-  );
+//       </div> */}
+//     </div>
+//   );
+const details=`Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis impedit ratione veniam. Quaerat veniam iste nemo excepturi, ut numquam accusantium sint sed sapiente
+ necessitatibus facere voluptates nihil, corrupti repudiandae facilis .`
+const [show, setShow]=useState(false)
+const showHandler=()=>{
+    setShow(!show)
+}
+return <>
+<p>{show? details : details.substring(0,100)}</p>
+<button className='btn !bg-yellow-300' onClick={showHandler}>{show? "show less":"show more"}</button>
+</>
 }
 
 export default SimpleState
