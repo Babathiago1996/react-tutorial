@@ -3,11 +3,11 @@ import { useState,useEffect } from 'react'
 
 // changing (re render)
 // run side effect (initial loading, once the component change)
-// cb, optional dependency array list []- once(initials , [value1, value2]
+// cb, optional dependency array list []- once(initials , [value1, v value2]
 
 const SimpleEffect = () => {
     const [count, setCount]=useState(1)
-    const [num, setNum]=useEffect(20)
+    const [num, setNum]=useState(20)
     useEffect(()=>{
         console.log("useEffect ran")
     } , [count, num])

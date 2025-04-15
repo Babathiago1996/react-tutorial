@@ -1,9 +1,13 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
+import { HashLoader } from 'react-spinners';
+
+
 // product----> product(api)
 const url = "https://dummyjson.com/products";
 const FetchData = () => {
     const [products, setProducts] = useState([]);
+    const [isloading, setIsLoading]=useState(true)
 
 
     useEffect(()=>{
@@ -11,11 +15,20 @@ const getProducts=async ()=>{
     const res=await fetch(url)
     const data =await res.json()
     console.log(data.products)
-                setProducts(data.products);
+    setIsLoading(false)
+     setProducts(data.products);
 
 };
 getProducts()
  }, [])
+
+ if(isloading){
+    return (
+      <div className='flex items-center justify-center h-60'>
+        <HashLoader color="#ff0000" />
+      </div>
+    );
+ }
   return (
     <div>
 <h1>List of products</h1>
