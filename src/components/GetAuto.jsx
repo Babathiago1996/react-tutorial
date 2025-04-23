@@ -4,6 +4,7 @@ import {PuffLoader} from "react-spinners"
 import { useFetch } from '../hooks/useFetch';
 const url = "https://example-data.draftbit.com/authors?_limit=10";
 const GetAuto = () => {
+  // when i dont need to destructure ,we only rename bcoz author appear direct in the api 
     const {data:authors, isloading}  = useFetch(url)
     
     // const[authors, setAuthors]=useState([])

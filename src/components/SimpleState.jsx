@@ -57,7 +57,7 @@ const showHandler=()=>{
     setShow(!show)
 }
 return <>
-<p>{show? details : details.substring(0,100)}</p>
+<p>{show? details : details.substring(0,100)+ "..."}</p>
 <button className='btn !bg-yellow-300' onClick={showHandler}>{show? "show less":"show more"}</button>
 </>
 }
