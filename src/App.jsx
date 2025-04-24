@@ -11,6 +11,7 @@ import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
 import Timeline from "./pages/Timeline";
 import SingleTweet from "./pages/SingleTweet";
+import DashboardLayout from "./pages/DashboardLayout";
 
 function App() {
   return (
@@ -45,22 +46,25 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/homepage" element={<Navigate to="/" />}/>
-          <Route path="/about" element={<About/>}/>
-          <Route path="/about us" element={<Navigate to="/about"/>} />
+          <Route path="/" element={<Home />} />
+          <Route path="/homepage" element={<Navigate to="/" />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/about us" element={<Navigate to="/about" />} />
           <Route path="/Contact" element={<Contact />} />
-          <Route path="/store" element={<Store/>}/>
-          <Route path="/login" element={<Login/>} />
+          <Route path="/store" element={<Store />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/timeline" element={<Timeline />} />
-          <Route path="timeline/:id" element={<SingleTweet/>}/>
+          <Route path="timeline/:id" element={<SingleTweet />} />
+          <Route path="/dashboard" element={<DashboardLayout />}>
+            {/* children would be here */}
+            <Route index element={<h1>Home Dashboard</h1>} />
+            <Route path="trash" element={<h1>trash</h1>} />
+            <Route path="spam" element={<h1>spam</h1>} />
+          </Route>
 
-          <Route path="*" element={<NotFound/>}/>
-
-
-          
-      </Routes>
-        <Footer/>
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+        <Footer />
       </Router>
     </>
   );

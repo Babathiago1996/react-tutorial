@@ -38,7 +38,7 @@ const Fetchuser = () => {
             lastName,
             image,
             gender,
-            address: address,
+            address: {address},
             city,
             state,
           } = user;
