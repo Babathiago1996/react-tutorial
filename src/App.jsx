@@ -61,6 +61,7 @@ function App() {
             <Route path="trash" element={<h1>trash</h1>} />
             <Route path="spam" element={<h1>spam</h1>} />
           </Route>
+          
 
           <Route path="*" element={<NotFound />} />
         </Routes>

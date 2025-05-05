@@ -16,7 +16,7 @@ const validationSchema=yup.object().shape({
 })
 
 const ReactHookForm = () => {
-    const{register , handleSubmit, password, formState:{errors},reset}= useForm({resolver: yupResolver(validationSchema)})
+    const{register , handleSubmit, formState:{errors},reset}= useForm({resolver: yupResolver(validationSchema)})
 const  [isSubmitting, setIsSubmitting]=useState(false)
 
 
